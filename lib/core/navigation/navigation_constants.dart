@@ -3,5 +3,5 @@ class NavigationConstants {
   static const String landingRouter = 'LandingRouter';
 
   // initial path
-  static final String initialPath = '/';
+  static const String initialPath = '/';
 }

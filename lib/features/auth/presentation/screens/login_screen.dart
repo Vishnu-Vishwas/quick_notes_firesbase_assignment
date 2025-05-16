@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
 
           decoration: BoxDecoration(
             color: colorScheme.tertiary,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topRight: Radius.circular(70),
               topLeft: Radius.circular(70),
             ),
@@ -64,14 +64,14 @@ class LoginScreen extends StatelessWidget {
                     style: textTheme.headlineLarge,
                   ),
 
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   Text(
                     TextConstants.loginToYourAccount,
                     style: textTheme.bodyLarge,
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 60,
                   ), // TODO: Ask sir what can be done in this place
 
@@ -93,14 +93,14 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(height: 22),
+                  const SizedBox(height: 22),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
-                          CheckBoxWidget(),
+                          const CheckBoxWidget(),
                           Text(
                             TextConstants.rememberMe,
                             style: textTheme.bodySmall?.copyWith(
@@ -120,7 +120,7 @@ class LoginScreen extends StatelessWidget {
                     ],
                   ),
 
-                  SizedBox(height: 48),
+                  const SizedBox(height: 48),
 
                   ButtonWidget(
                     text: TextConstants.login,
@@ -132,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                     onTap: () {},
                   ),
 
-                  SizedBox(height: 14),
+                  const SizedBox(height: 14),
 
                   Text(
                     TextConstants.dontHaveAnAccount,
@@ -141,7 +141,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
 
                   Text(
                     TextConstants.orContinueWith,
@@ -151,7 +151,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

@@ -4,7 +4,7 @@ class LightTheme {
   static final ThemeData lightTheme = ThemeData(
     fontFamily: 'Poppins',
 
-    colorScheme: ColorScheme(
+    colorScheme: const ColorScheme(
       brightness: Brightness.light,
 
       primary: Color(0xFF635985), // light purple
@@ -23,9 +23,9 @@ class LightTheme {
       onError: Colors.white,
     ),
 
-    scaffoldBackgroundColor: Color(0xFFFDFDFD), // almost white
+    scaffoldBackgroundColor: const Color(0xFFFDFDFD), // almost white
 
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       headlineLarge: TextStyle(
         color: Color(0xFF18122B),
         fontWeight: FontWeight.w600,

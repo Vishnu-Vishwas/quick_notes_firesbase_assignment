@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quick_notes/core/firebase/firebase_initializer.dart';
 import 'package:quick_notes/core/theme/app_theme.dart';
-import 'core/di/injector.dart';
-import 'core/navigation/app_router.dart';
+import 'package:quick_notes/core/di/injector.dart';
+import 'package:quick_notes/core/navigation/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

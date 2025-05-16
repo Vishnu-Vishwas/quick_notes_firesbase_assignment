@@ -1,15 +1,15 @@
 class AssetConstants {
   // images
-  static final String landingPagImage = 'assets/images/landing_page.png';
+  static const String landingPagImage = 'assets/images/landing_page.png';
 
   // icons
-  static final String backArrow = 'assets/icons/back_arrow.png';
-  static final String eyeHideText = 'assets/icons/eye_hide_text.png';
+  static const String backArrow = 'assets/icons/back_arrow.png';
+  static const String eyeHideText = 'assets/icons/eye_hide_text.png';
 
-  static final String facebook = 'assets/icons/facebook.png';
-  static final String google = 'assets/icons/google.png';
+  static const String facebook = 'assets/icons/facebook.png';
+  static const String google = 'assets/icons/google.png';
 
-  static final String attackOnTitan = 'assets/images/attack_on_titan.png';
-  static final String naruto = 'assets/images/naruto.png';
-  static final String attackOnTitan4x = 'assets/images/4x/attack_on_titan.png';
+  static const String attackOnTitan = 'assets/images/attack_on_titan.png';
+  static const String naruto = 'assets/images/naruto.png';
+  static const String attackOnTitan4x = 'assets/images/4x/attack_on_titan.png';
 }

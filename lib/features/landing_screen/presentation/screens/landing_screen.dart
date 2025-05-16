@@ -35,7 +35,7 @@ class LandingScreen extends StatelessWidget {
                       alignment: Alignment.centerRight,
                       child: GestureDetector(
                         onTap: () {
-                          // context.router.replace(AnimeListRoute());
+                          context.router.replace(const HomeRoute());
                         },
                         child: Text(
                           TextConstants.skip,
@@ -64,7 +64,7 @@ class LandingScreen extends StatelessWidget {
                         textColor: AppColors.black,
                         fontSize: 20,
                         onTap: () {
-                          context.router.push(SignupRoute());
+                          context.router.push(const SignupRoute());
                         },
                       ),
                     ],

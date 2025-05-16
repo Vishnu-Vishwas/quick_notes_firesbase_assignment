@@ -7,6 +7,6 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Signup Screen "));
+    return const Center(child: Text("Signup Screen "));
   }
 }

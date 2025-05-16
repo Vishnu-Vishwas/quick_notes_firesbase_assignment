@@ -31,7 +31,10 @@ class TextFormFieldWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius ?? 16),
           borderSide: BorderSide.none,
         ),
-        contentPadding: EdgeInsets.symmetric(vertical: 24, horizontal: 18),
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 24,
+          horizontal: 18,
+        ),
 
         hintText: hintText,
         hintStyle: context.textTheme.bodyLarge?.copyWith(
@@ -43,7 +46,10 @@ class TextFormFieldWidget extends StatelessWidget {
         // focusColor: Colors.black,
         // hoverColor: Colors.blue,
         suffixIcon: icon,
-        suffixIconConstraints: BoxConstraints(minWidth: 80, maxHeight: 30),
+        suffixIconConstraints: const BoxConstraints(
+          minWidth: 80,
+          maxHeight: 30,
+        ),
       ),
     );
   }

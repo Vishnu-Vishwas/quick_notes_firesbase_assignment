@@ -4,7 +4,7 @@ class DarkTheme {
   static final ThemeData darkTheme = ThemeData(
     fontFamily: 'Poppins',
 
-    colorScheme: ColorScheme(
+    colorScheme: const ColorScheme(
       brightness: Brightness.dark,
 
       primary: Color(0xFF635985), // light purple
@@ -23,7 +23,7 @@ class DarkTheme {
       onError: Colors.white,
     ),
 
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       headlineLarge: TextStyle(
         color: Color(0xffE5E5E5),
         fontWeight: FontWeight.w600,

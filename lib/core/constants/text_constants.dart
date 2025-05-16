@@ -1,5 +1,5 @@
 class TextConstants {
-  static const String quickNotes = "Quick Notes.";
+  static const String quickNotes = "Quick Notes";
   static const String skip = "Skip";
 
   static const String login = "Login";
@@ -27,4 +27,7 @@ class TextConstants {
   // error messages
   static const String defaultErrorMessage = 'Something went wrong!';
   static const String authErrorMessage = 'Authentication Failed!';
+  static const String firestoreErrorMessage = 'Sorry error fetching data';
+
+  static const String firestoreSuccessMessage = 'firestore success';
 }

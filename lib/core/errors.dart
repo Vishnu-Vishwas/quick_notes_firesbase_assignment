@@ -11,6 +11,13 @@ class AuthServiceError extends Failure {
   AuthServiceError({required super.statusCode, required super.errorMessage});
 }
 
+class FirestoreServiceError extends Failure {
+  FirestoreServiceError({
+    required super.statusCode,
+    required super.errorMessage,
+  });
+}
+
 class UnExpectedError extends Failure {
   UnExpectedError({
     super.statusCode = -1,

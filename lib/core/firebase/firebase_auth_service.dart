@@ -8,22 +8,22 @@ class FirebaseAuthService {
 
   FirebaseAuthService(this.firebaseAuth);
 
-  Future<void> singUp(String userName, String email, String password) async {
-    try {
-      await firebaseAuth.createUserWithEmailAndPassword(
-        email: userName,
-        password: password,
-      );
-    } on FirebaseAuthException catch (error) {
-      if (error.code == 'weak-password') {
-        print("Please Enter a strong password");
-      } else if (error.code == 'email-already-in-use') {
-        print('Account Already Exists');
-      }
-    } catch (error) {
-      print("Unexpected Error");
-    }
-  }
+  // Future<void> singUp(String userName, String email, String password) async {
+  //   try {
+  //     await firebaseAuth.createUserWithEmailAndPassword(
+  //       email: userName,
+  //       password: password,
+  //     );
+  //   } on FirebaseAuthException catch (error) {
+  //     if (error.code == 'weak-password') {
+  //       print("Please Enter a strong password");
+  //     } else if (error.code == 'email-already-in-use') {
+  //       print('Account Already Exists');
+  //     }
+  //   } catch (error) {
+  //     print("Unexpected Error");
+  //   }
+  // }
 
   // sign in
   // Future<void> signIn(
