@@ -1,4 +1,7 @@
+import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:quick_notes/core/constants/text_constants.dart';
+import 'package:quick_notes/core/errors.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth firebaseAuth;
@@ -23,21 +26,47 @@ class FirebaseAuthService {
   }
 
   // sign in
-  Future<void> signIn(String email, String password) async {
+  // Future<void> signIn(
+  //   String email,
+  //   String password,
+  //   void Function(UserCredential user) parser,
+  // ) async {
+  //   try {
+  //     final UserCredential userData = await firebaseAuth
+  //         .signInWithEmailAndPassword(email: email, password: password);
+  //     parser(userData);
+  //   } on FirebaseAuthException catch (e) {
+  //     if (e.code == 'user-not-found') {
+  //       print('No user found for that email.');
+  //     } else if (e.code == 'wrong-password') {
+  //       print('Wrong password provided for that user.');
+  //     }
+  //   }
+  // }
+
+  Future<Either<Failure, UserCredential>> signIn(
+    String email,
+    String password,
+  ) async {
     try {
-      await firebaseAuth.signInWithEmailAndPassword(
+      final userData = await firebaseAuth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        print('No user found for that email.');
-      } else if (e.code == 'wrong-password') {
-        print('Wrong password provided for that user.');
-      }
+      return right(userData);
+    } on FirebaseAuthException {
+      return left(
+        AuthServiceError(
+          statusCode: 401,
+          errorMessage: TextConstants.authErrorMessage,
+        ),
+      );
+    } catch (_) {
+      return left(UnExpectedError());
     }
   }
 
   // update username
   // delete user
+  // logout
 }

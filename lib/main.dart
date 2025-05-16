@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quick_notes/core/firebase/firebase_initializer.dart';
-
+import 'package:quick_notes/core/theme/app_theme.dart';
 import 'core/di/injector.dart';
+import 'core/navigation/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +17,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Scaffold());
+    final AppRouter appRoute = AppRouter();
+    return MaterialApp.router(
+      themeMode: ThemeMode.dark,
+
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+
+      debugShowCheckedModeBanner: false,
+      routerConfig: appRoute.config(),
+    );
   }
 }
