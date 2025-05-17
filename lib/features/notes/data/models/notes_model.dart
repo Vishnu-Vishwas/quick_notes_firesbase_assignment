@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:quick_notes/features/notes/domain/entities/notes_entity.dart';
 
 class NotesModel extends NotesEntity {
@@ -17,6 +18,17 @@ class NotesModel extends NotesEntity {
       title: notesEntity.title,
       content: notesEntity.content,
       timestamp: notesEntity.timestamp,
+    );
+  }
+
+  // from snapshot
+  factory NotesModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> doc) {
+    final data = doc.data()! ?? {};
+    return NotesModel(
+      docId: doc.id,
+      title: data['title'] ?? "",
+      content: data['content'] ?? "",
+      timestamp: data['timestamp'] ?? "",
     );
   }
 

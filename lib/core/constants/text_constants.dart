@@ -1,5 +1,7 @@
 class TextConstants {
   static const String quickNotes = "Quick Notes";
+  static const String noteDetails = "Note Details";
+  static const String addNote = "Add Note";
   static const String skip = "Skip";
 
   static const String login = "Login";
@@ -30,4 +32,7 @@ class TextConstants {
   static const String firestoreErrorMessage = 'Sorry error fetching data';
 
   static const String firestoreSuccessMessage = 'firestore success';
+
+  static const String enterTitle = 'Enter the title';
+  static const String enterContent = 'Enter the Content';
 }

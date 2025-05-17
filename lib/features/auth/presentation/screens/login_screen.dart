@@ -4,7 +4,7 @@ import 'package:quick_notes/core/constants/assest_constants.dart';
 import 'package:quick_notes/core/constants/text_constants.dart';
 import 'package:quick_notes/core/extensions/context_extension.dart';
 import 'package:quick_notes/features/auth/presentation/widgets/check_box_widget.dart';
-import 'package:quick_notes/features/auth/presentation/widgets/text_form_field_widget.dart';
+import 'package:quick_notes/features/common/presentation/widgets/text_form_field_widget.dart';
 import 'package:quick_notes/features/common/presentation/widgets/button_widget.dart';
 
 @RoutePage()

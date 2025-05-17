@@ -11,6 +11,40 @@
 part of 'app_router.dart';
 
 /// generated route for
+/// [AddNoteScreen]
+class AddNoteRoute extends PageRouteInfo<AddNoteRouteArgs> {
+  AddNoteRoute({Key? key, List<PageRouteInfo>? children})
+    : super(
+        AddNoteRoute.name,
+        args: AddNoteRouteArgs(key: key),
+        initialChildren: children,
+      );
+
+  static const String name = 'AddNoteRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<AddNoteRouteArgs>(
+        orElse: () => const AddNoteRouteArgs(),
+      );
+      return AddNoteScreen(key: args.key);
+    },
+  );
+}
+
+class AddNoteRouteArgs {
+  const AddNoteRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'AddNoteRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -89,6 +123,43 @@ class LoginRouteArgs {
   @override
   String toString() {
     return 'LoginRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
+/// [NoteDetailsScreen]
+class NoteDetailsRoute extends PageRouteInfo<NoteDetailsRouteArgs> {
+  NoteDetailsRoute({
+    Key? key,
+    required NotesEntity note,
+    List<PageRouteInfo>? children,
+  }) : super(
+         NoteDetailsRoute.name,
+         args: NoteDetailsRouteArgs(key: key, note: note),
+         initialChildren: children,
+       );
+
+  static const String name = 'NoteDetailsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<NoteDetailsRouteArgs>();
+      return NoteDetailsScreen(key: args.key, note: args.note);
+    },
+  );
+}
+
+class NoteDetailsRouteArgs {
+  const NoteDetailsRouteArgs({this.key, required this.note});
+
+  final Key? key;
+
+  final NotesEntity note;
+
+  @override
+  String toString() {
+    return 'NoteDetailsRouteArgs{key: $key, note: $note}';
   }
 }
 

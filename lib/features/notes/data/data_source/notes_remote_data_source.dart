@@ -25,6 +25,16 @@ class NotesRemoteDataSourceImpl extends NotesRemoteDataSource {
                   final data = doc.data();
                   return NotesModel.fromJson(data);
                 }).toList();
+            // final notesList =
+            //     snapshot.docs.map((doc) {
+            //       return NotesModel.fromSnapshot(doc);
+            //     }).toList();
+
+            print('Fetched ${snapshot.docs.length} docs from Firestore');
+            for (var doc in snapshot.docs) {
+              print('DocID: ${doc.id}, Data: ${doc.data()}');
+            }
+
             return Right(notesList);
           } catch (error) {
             return Left(

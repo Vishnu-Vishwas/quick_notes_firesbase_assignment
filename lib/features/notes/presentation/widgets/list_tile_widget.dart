@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:quick_notes/core/extensions/context_extension.dart';
+import 'package:quick_notes/core/utils/format_timestamp.dart';
 
 class ListTileWidget extends StatelessWidget {
   final String? title;
@@ -27,6 +28,7 @@ class ListTileWidget extends StatelessWidget {
         fontWeight: FontWeight.bold,
       ),
 
+      // todo: is it right to have column in subtitle
       subtitle: Column(
         spacing: 10,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +41,7 @@ class ListTileWidget extends StatelessWidget {
           ),
 
           Text(
-            timestamp.toString(),
+            FormatTimeStamp.formatTimeStamp(timestamp!),
             style: textTheme.bodySmall?.copyWith(
               color: Colors.grey,
               fontSize: 12,
