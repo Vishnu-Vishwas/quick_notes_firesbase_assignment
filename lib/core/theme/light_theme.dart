@@ -4,20 +4,20 @@ class LightTheme {
   static final ThemeData lightTheme = ThemeData(
     fontFamily: 'Poppins',
 
-    colorScheme: const ColorScheme(
+    colorScheme: ColorScheme(
       brightness: Brightness.light,
 
-      primary: Color(0xFF635985), // light purple
-      onPrimary: Colors.white,
+      primary: const Color(0xFF635985), // light purple
+      onPrimary: Colors.black,
 
-      secondary: Color(0xFFBFCFE7), // soft lavender-blue
-      onSecondary: Colors.black,
+      secondary: const Color(0xFFBFCFE7), // soft lavender-blue
+      onSecondary: Colors.teal[100]!,
 
-      tertiary: Color(0xFFEADCF2), // pale lavender
+      tertiary: const Color(0xFFEADCF2), // pale lavender
       onTertiary: Colors.black,
 
-      surface: Color(0xFFF9F9F9), // soft near-white
-      onSurface: Color(0xFF393053), // text on white bg
+      surface: const Color(0xFFF9F9F9), // soft near-white
+      onSurface: const Color(0xFF393053), // text on white bg
 
       error: Colors.red,
       onError: Colors.white,

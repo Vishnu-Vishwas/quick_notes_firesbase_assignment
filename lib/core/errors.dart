@@ -24,3 +24,10 @@ class UnExpectedError extends Failure {
     super.errorMessage = TextConstants.defaultErrorMessage,
   });
 }
+
+class ValidateFailure extends Failure {
+  ValidateFailure({
+    super.statusCode = -1,
+    super.errorMessage = TextConstants.defaultErrorMessage,
+  });
+}

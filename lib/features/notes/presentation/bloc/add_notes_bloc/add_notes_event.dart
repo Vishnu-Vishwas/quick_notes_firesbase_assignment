@@ -5,14 +5,9 @@ sealed class AddNotesEvent extends Equatable {}
 final class AddNoteEvent extends AddNotesEvent {
   final String title;
   final String content;
-  final Timestamp timestamp;
 
-  AddNoteEvent({
-    required this.title,
-    required this.content,
-    required this.timestamp,
-  });
+  AddNoteEvent({required this.title, required this.content});
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [title, content];
 }

@@ -7,6 +7,7 @@ import 'package:quick_notes/features/notes/data/data_source/notes_remote_data_so
 import 'package:quick_notes/features/notes/data/repository_impl/notes_repository_impl.dart';
 import 'package:quick_notes/features/notes/domain/respositories/notes_repository.dart';
 import 'package:quick_notes/features/notes/domain/usecases/notes_use_cases.dart';
+import 'package:quick_notes/features/notes/presentation/bloc/add_notes_bloc/add_notes_bloc.dart';
 import 'package:quick_notes/features/notes/presentation/bloc/home_bloc/home_bloc.dart';
 
 class Injector {
@@ -35,6 +36,9 @@ class Injector {
       ..registerLazySingleton<NotesUseCases>(
         () => NotesUseCases(notesRepository: injector<NotesRepository>()),
       )
-      ..registerFactory<HomeBloc>(() => HomeBloc(injector<NotesUseCases>()));
+      ..registerFactory<HomeBloc>(() => HomeBloc(injector<NotesUseCases>()))
+      ..registerFactory<AddNotesBloc>(
+        () => AddNotesBloc(injector<NotesUseCases>()),
+      );
   }
 }

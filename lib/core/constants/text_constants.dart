@@ -30,6 +30,8 @@ class TextConstants {
   static const String defaultErrorMessage = 'Something went wrong!';
   static const String authErrorMessage = 'Authentication Failed!';
   static const String firestoreErrorMessage = 'Sorry error fetching data';
+  static const String titleAndContentEmptyErrorMessage =
+      'Title and content cannot be empty';
 
   static const String firestoreSuccessMessage = 'firestore success';
 

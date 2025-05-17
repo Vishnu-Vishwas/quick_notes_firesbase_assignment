@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: colorScheme.surface,
+        backgroundColor: colorScheme.primary,
         onPressed: () {
           context.router.push(AddNoteRoute());
         },

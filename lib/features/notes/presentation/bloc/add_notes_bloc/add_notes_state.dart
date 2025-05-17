@@ -7,17 +7,17 @@ final class AddNotesInitial extends AddNotesState {
   List<Object?> get props => throw UnimplementedError();
 }
 
-final class AddNotesSuccess extends AddNotesState {
+final class AddNotesSuccessState extends AddNotesState {
   final String successMessage;
-  AddNotesSuccess({required this.successMessage});
+  AddNotesSuccessState({required this.successMessage});
 
   @override
   List<Object?> get props => [successMessage];
 }
 
-final class AddNotesFailure extends AddNotesState {
-  final String failureMessage;
-  AddNotesFailure({required this.failureMessage});
+final class AddNotesFailureState extends AddNotesState {
+  final Failure failureMessage;
+  AddNotesFailureState({required this.failureMessage});
 
   @override
   List<Object?> get props => [failureMessage];

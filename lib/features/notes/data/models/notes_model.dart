@@ -23,7 +23,7 @@ class NotesModel extends NotesEntity {
 
   // from snapshot
   factory NotesModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> doc) {
-    final data = doc.data()! ?? {};
+    final data = doc.data()!;
     return NotesModel(
       docId: doc.id,
       title: data['title'] ?? "",
